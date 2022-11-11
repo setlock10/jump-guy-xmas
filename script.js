@@ -143,11 +143,13 @@ function checkHat(){
     characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
     //console.log(characterTop)
 
-    if((characterTop<330)&&((characterLeft>330)&&(characterLeft<470))){
-        console.log("true");
+    if((characterTop<250)&&((characterLeft>330)&&(characterLeft<470))){
+        //console.log("true");
         hasHat = true;
 
         character.classList.add("background-run-hat");
+        connie.classList.add("connie-run-hat");
+        penny.classList.add("penny-run-hat");
 
         clearInterval(hatCheck);
         hatIcon.classList.add("hidden")
