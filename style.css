@@ -1,0 +1,144 @@
+body{
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-x: hidden; 
+}
+
+#game{
+    width: 1400px;
+    height: 600px;
+    border: 1px solid black;
+    margin:0%;
+}
+
+#character{
+    width: 256px;
+    height: 400px;
+    position: absolute;
+    top: 300px; 
+    scale:.5;
+    left:125px; 
+}
+#connie{
+    width: 256px;
+    height: 380px;
+    position: absolute;
+    top: 285px; 
+    scale:.60;
+    left:75px; 
+}
+#penny{
+    width: 256px;
+    height: 380px;
+    position: absolute;
+    top: 305px; 
+    scale:.5;
+    left:0px; 
+}
+
+
+#hat{
+    width: 256px;
+    height: 400px;
+    position: absolute;
+    top:200px; 
+    scale:.5;
+    left:400px;
+    background: url("./hat.png");
+
+    
+}
+
+
+@keyframes sprite-run {
+    from { background-position: 0px; }
+    to { background-position: 2560px; }
+}
+@keyframes cat-run {
+    from { background-position: 0px; }
+    to { background-position: 1024px; }
+}
+
+.run{
+    animation: sprite-run 800ms linear;
+    animation-timing-function: steps(10);
+    animation-iteration-count: infinite;
+}
+
+.run-cat{
+    animation: cat-run 500ms linear;
+    animation-timing-function: steps(4);
+    animation-iteration-count: infinite;
+}
+
+.flip{
+    transform: scaleX(-1);
+}
+
+@keyframes jump{
+    0%{top: 150px;}
+    30%{top: 100px;}
+    70%{top: 100px;}
+    100%{top: 150px;}
+}
+
+.animate-jump{
+    background: url("./xmas-no-hat.png");
+    animation: jump 300ms linear;
+}
+
+.background-run{
+    background: url("./xmas-no-hat.png");
+}
+
+.background-stand{
+    background: url("./me-stand.png");
+}
+
+.connie-run{
+    background: url("./connie-run-no-hat.png");
+}
+.connie-run-hat{
+    background: url("./connie-run-hat.png");
+}
+
+.connie-stand{
+    background: url("./connie-stand-no-hat.png");
+}
+
+.connie-stand-hat{
+    background: url("./connie-stand-with-hat.png");
+}
+.penny-run{
+    background: url("./penny-run-no-hat.png");
+}
+.penny-run-hat{
+    background: url("./penny-run-with-hat.png");
+}
+
+
+.penny-stand{
+    background: url("./penny-stand-no-hat.png");
+}
+
+.penny-stand-hat{
+    background: url("./penny-stand-with-hat.png");
+}
+
+
+.animate-jump-hat{
+    background: url("./xmas-with-hat.png");
+    animation: jump 300ms linear;
+}
+
+.background-run-hat{
+    background: url("./xmas-with-hat.png");
+}
+
+.background-stand-hat{
+    background: url("./me-stand-hat.png");
+}
+
+.hidden{
+    visibility: hidden;
+}
